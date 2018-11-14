@@ -1,0 +1,10 @@
+.img-homepage{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.img-homepage2{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
