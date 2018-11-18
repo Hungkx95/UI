@@ -1,14 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-product-show',
   templateUrl: './product-show.component.html',
-  styleUrls: ['./product-show.component.css']
+  styleUrls: ['./product-show.component.css'],
+  providers: [NgbModalConfig, NgbModal,NgbCarouselConfig]
 })
 export class ProductShowComponent implements OnInit {
+  images = [1, 2, 3, 4].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+  constructor(config: NgbModalConfig, private modalService: NgbModal,config1: NgbCarouselConfig) {
+    // customize default values of modals used by this component tree
+    config.backdrop = 'static';
+    config.keyboard = false;
+    //ảnh
+    config1.interval = 5000;
+    config1.wrap = false;
+    config1.keyboard = false;
+    config1.pauseOnHover = false;
+  }
 
-  constructor() { }
-
+  open(content) {
+    this.modalService.open(content);
+  }
   ngOnInit() {
   }
   id=1;

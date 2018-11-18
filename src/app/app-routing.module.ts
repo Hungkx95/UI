@@ -7,15 +7,22 @@ import { CartComponent } from './Components/cart/cart.component';
 import { UserInfoComponent } from './Components/user-info/user-info.component';
 import { LoginComponent } from './Components/login/login.component';
 import { SignupComponent } from './Components/signup/signup.component';
+import { AdminPageComponent } from './Components/admin-page/admin-page.component';
+import { BoughtComponent } from './Components/bought/bought.component';
+import { SearchComponent } from './Components/search/search.component';
+
 
 
 const routes: Routes = [
   { path: 'view/:id', component: ProductViewComponent },
   { path:'home',component: HomepageComponent},
   { path:'cart',component:CartComponent},
-  { path:'user',component:UserInfoComponent},
+  { path:'user/:id',component:UserInfoComponent},
   { path: 'login',component:LoginComponent},
   { path:'signup',component:SignupComponent},
+  { path:'admin',component:AdminPageComponent },
+  { path:'bought/:id',component:BoughtComponent},
+  { path:'search',component:SearchComponent},
 
 
 

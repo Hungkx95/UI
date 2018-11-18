@@ -14,8 +14,11 @@ import { Err404Component } from './Components/err404/err404.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { LoginComponent } from './Components/login/login.component';
 import { UserInfoComponent } from './Components/user-info/user-info.component';
-import { AdminPageComponent } from './Components/admin-page/admin-page.component';
 import { SignupComponent } from './Components/signup/signup.component';
+import { AdminPageComponent } from './Components/admin-page/admin-page.component';
+import { SearchComponent } from './Components/search/search.component';
+import { BoughtComponent } from './Components/bought/bought.component';
+
 
 @NgModule({
   declarations: [
@@ -29,8 +32,14 @@ import { SignupComponent } from './Components/signup/signup.component';
     CartComponent,
     LoginComponent,
     UserInfoComponent,
+    
+    SignupComponent,
+    
     AdminPageComponent,
-    SignupComponent
+    
+    SearchComponent,
+    
+    BoughtComponent
   ],
   imports: [
     BrowserModule,
